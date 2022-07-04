@@ -1,0 +1,38 @@
+mysql> desc AddressBook;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| FirstName   | varchar(50)  | YES  |     | NULL    |       |
+| LastName    | varchar(50)  | YES  |     | NULL    |       |
+| Address     | varchar(100) | YES  |     | NULL    |       |
+| City        | varchar(50)  | YES  |     | NULL    |       |
+| State       | varchar(50)  | YES  |     | NULL    |       |
+| zip         | int          | YES  |     | NULL    |       |
+| phoneNumber | int          | YES  |     | NULL    |       |
+| email       | varchar(150) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> select * from AddressBook;
++-----------+----------+---------+-------+------------+--------+-------------+-------------------------+
+| FirstName | LastName | Address | City  | State      | zip    | phoneNumber | email                   |
++-----------+----------+---------+-------+------------+--------+-------------+-------------------------+
+| Mohini    | Patange  | Latur   | Latur | Maharastra | 413512 |    93594921 | patangemohini@gamil.com |
+| Rohini    | Tekale   | Pune    | Pune  | Maharastra | 413500 |    94594921 | patangemohini@gamil.com |
++-----------+----------+---------+-------+------------+--------+-------------+-------------------------+
+2 rows in set (0.11 sec)
+
+mysql> INSERT INTO AddressBook (FirstName, LastName, Address, City, State, zip, phoneNumber, email) VALUES ('Pratibha', 'Patil', 'Attarga', 'Bhalki', 'Karnatka', 413500, 94590021, 'patil@gamil.com');
+Query OK, 1 row affected (0.23 sec)
+
+mysql> select * from AddressBook;
++-----------+----------+---------+--------+------------+--------+-------------+-------------------------+
+| FirstName | LastName | Address | City   | State      | zip    | phoneNumber | email                   |
++-----------+----------+---------+--------+------------+--------+-------------+-------------------------+
+| Mohini    | Patange  | Latur   | Latur  | Maharastra | 413512 |    93594921 | patangemohini@gamil.com |
+| Rohini    | Tekale   | Pune    | Pune   | Maharastra | 413500 |    94594921 | patangemohini@gamil.com |
+| Pratibha  | Patil    | Attarga | Bhalki | Karnatka   | 413500 |    94590021 | patil@gamil.com         |
++-----------+----------+---------+--------+------------+--------+-------------+-------------------------+
+3 rows in set (0.00 sec)
+
+mysql>
