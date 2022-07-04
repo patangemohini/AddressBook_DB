@@ -1,0 +1,36 @@
+
+mysql> CREATE TABLE AddressBook (
+    -> FirstName varchar(50),
+    -> LastName varchar(50),
+    -> Address varchar(100),
+    -> City varchar(50),
+    -> State varchar(50),
+    -> zip int,
+    -> phoneNumber int(10),
+    -> email varchar(150));
+Query OK, 0 rows affected, 1 warning (2.62 sec)
+
+mysql> show tables;
++------------------------------+
+| Tables_in_addressbookservice |
++------------------------------+
+| addressbook                  |
++------------------------------+
+1 row in set (0.01 sec)
+
+mysql> desc AddressBook;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| FirstName   | varchar(50)  | YES  |     | NULL    |       |
+| LastName    | varchar(50)  | YES  |     | NULL    |       |
+| Address     | varchar(100) | YES  |     | NULL    |       |
+| City        | varchar(50)  | YES  |     | NULL    |       |
+| State       | varchar(50)  | YES  |     | NULL    |       |
+| zip         | int          | YES  |     | NULL    |       |
+| phoneNumber | int          | YES  |     | NULL    |       |
+| email       | varchar(150) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+8 rows in set (0.26 sec)
+
+mysql>
